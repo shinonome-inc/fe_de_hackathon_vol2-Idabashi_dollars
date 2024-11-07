@@ -67,6 +67,7 @@ body {
   padding: 30px;
 }
 
+/* 予約ボタン */
 .prescribe-btn a {
   display: inline-block;
   padding: 12px 30px;
@@ -76,10 +77,45 @@ body {
   text-decoration: none;
   border-radius: 25px;
   transition: 1s;
+  position: relative; /* ボタン内の光のエフェクト用 */
+  overflow: hidden; /* 光のエフェクトがボタンの範囲内に収まるように */
+}
+
+.prescribe-btn a::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -320px;
+  width: 320px;
+  height: 160px;
+  background: white;
+  transform: rotate(-45deg);
+  opacity: 0.5;
+  z-index: 0;
+  transition: all 0.3s ease-out;
+}
+
+.prescribe-btn a > span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+  font-weight: bold;
 }
 
 .prescribe-btn a:hover {
   background-color: green;
   transition: 1s;
   transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 255, 0, 0.5); /* 光のシャドウ */
+}
+
+.prescribe-btn a:hover::before {
+  top: 100%;
+  left: 100%;
+  opacity: 0;
+  transform: rotate(45deg); /* 光の回転 */
 }
