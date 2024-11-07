@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/experience.css" />
     <title>体験ページ</title>
+    <script src="../js/experience.sound.js"></script>
   </head>
   <body>
     <main>
@@ -75,8 +76,11 @@
 
       <section class="prescribe-section">
         <p class="prescribe-btn">
-          <a href="#">ご予約はこちらから</a>
+          <a href="#" onclick="audio()">ご予約はこちらから</a>
         </p>
+        <audio id="btn-audio">
+          <source src="../assets/sounds/剣で斬る1.mp3" type="audio/mp3">
+        </audio>
       </section>
 
     </main>
