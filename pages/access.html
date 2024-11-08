@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>周辺ページ</title>
+    <link rel="stylesheet" href="../css/access.css" />
+  </head>
+  <body>
+
+    <main>
+
+      <section class="access-section">
+
+        <div class="access">
+          <p class="hotel-name">江戸城ホテル</p>
+          <p class="hotel-place">
+            〒100-8111 東京都千代田区千代田1-1</br>
+            JR東京駅丸の内中央口徒歩8分</br>
+          </p>
+          <p class="transportation">
+            ※ご来館の際は、公共交通機関（タクシーのぞく）をご利用ください。</br>
+            タクシー・自家用車・バイク・自転車でのご来館は固くお断りいたします。
+          </p>
+          <p class="status">
+            <span class="rest">休館日</span> 
+            <span class="none">年中無休</span>
+          </p>
+          <p class="retail-link">
+            <a href="#"> アクセス・周辺施設へ→</a>
+          </p>
+        </div>
+
+        <div id="map">
+          <script>
+            function initMap() {
+                let latlng = new google.maps.LatLng( 35.685175, 139.7528 );//中心の緯度, 経度
+                let map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 14,//ズームの調整
+                  center: latlng//上で設定した中心
+                });
+                let marker = new google.maps.Marker({
+                  position: latlng,
+                  map: map
+                });
+              }
+          </script>
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnN_OSscXhydSQQs-u55g-RvkVhonE7X4&callback=initMap"></script>
+        
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </body>
+
+</html>

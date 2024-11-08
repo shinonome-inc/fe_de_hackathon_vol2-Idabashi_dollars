@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+}
+.access-section {
+  display: flex;
+  justify-content: center;
+}
+
+.access {
+  text-align: center;
+  background-color: #e8be6b;
+  width: 50%;
+}
+
+.hotel-name {
+  font-size: 64px;
+  padding: 10px;
+  margin: 50px 0px 76px 0px;
+}
+
+.transportation {
+  color: #383838;
+  margin-bottom: 50px;
+}
+
+.status {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  width: 480px;
+}
+
+.rest {
+  background-color: white;
+  padding: 0px 20px;
+  margin: 10px;
+}
+
+.none {
+  padding: 0px 20px;
+  margin: 10px;
+}
+
+.retail-link {
+  margin-top: 50px;
+}
+
+.retail-link a {
+  width: 248px;
+  height: 48px;
+  text-decoration: none;
+  color: white;
+  background-color: gray;
+  padding: 10px 50px;
+}
+
+.retail-link a:hover {
+  background-color: #555;
+}
+
+#map {
+  width: 50%;
+  height: 584px;
+  background-color: grey;
+}
