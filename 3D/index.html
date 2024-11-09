@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="
+    https://cdn.jsdelivr.net/npm/fflate@0.8.2/umd/index.min.js
+    "></script>
+    <script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.142.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/three@0.142.0/examples/js/loaders/EXRLoader.js"></script>
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      #myCanvas {
+        display: block;
+        width: 100vw;
+        height: 90vh;
+      }
+
+      #overlay {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 40%;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        font-size: 1.2em;
+      }
+      #content {
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <div id="overlay">
+      <h1>Hotel江戸城へようこそ</h1>
+      <p>
+        歴史と現代の融合、<strong>Hotel江戸城</strong>へようこそ。当ホテルは江戸時代の壮大な建築美を忠実に再現しつつ、現代の快適な設備を取り入れたユニークな宿泊体験を提供します。
+      </p>
+      <p>
+        雄大な庭園、贅沢なスパ、そして伝統的な和食から国際的な料理まで楽しめるレストランを完備。<br />
+        江戸時代の風情を感じながら、最高級のサービスをお楽しみください。
+      </p>
+    </div>
+    <div id="content">
+      <h1>Additional Content</h1>
+      <p>
+        This is the additional content below the 3D model. You can add more
+        text, images, or other HTML elements here. The 3D model's zoom
+        functionality has been disabled, but you can still scroll down to see
+        this content.
+      </p>
+      <p>Enjoy exploring the rest of the site!</p>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
