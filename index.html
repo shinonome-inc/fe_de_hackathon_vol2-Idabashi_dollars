@@ -4,25 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>トップページ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/top.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/access.css" />
     <link rel="stylesheet" href="./css/experience.css" />
     <link rel="stylesheet" href="./css/access.css" />
     <link rel="stylesheet" href="./css/plan.css" />
+    <script src="
+    https://cdn.jsdelivr.net/npm/fflate@0.8.2/umd/index.min.js
+    "></script>
+    <script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.142.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/three@0.142.0/examples/js/loaders/EXRLoader.js"></script>
   </head>
-
   <body>
-    <site-header> </site-header>
+    <site-header></site-header>
 
     <main>
       <section class="top-page-section">
         <div class="top-images">
-          <img src="assets/images/edo-castle.png" class="background-2Dimage" />
+          <div class="top-2D">
+            <img
+              src="assets/images/edonoshiro.png"
+              class="background-2Dimage"
+            />
+            <h1 class="top-welcome">ようこそ、 <br />江戸城へ</h1>
+          </div>
           <canvas id="myCanvas"></canvas>
           <img
-            src="assets/images/2D-button.png"
+            src="assets/images/3D-button.png"
             id="change-button"
+            class="top-2D-to-3D-button"
             onclick="changeImage()"
           />
         </div>
@@ -244,6 +263,6 @@
     <script src="js/component/header.js"></script>
     <script src="js/component/footer.js"></script>
     <script src="js/top.js"></script>
-    <script src="3D/js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
