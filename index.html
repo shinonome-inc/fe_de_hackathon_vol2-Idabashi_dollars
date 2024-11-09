@@ -10,12 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/top.css" />
+    <link rel="stylesheet" href="./css/top.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/access.css" />
     <link rel="stylesheet" href="./css/experience.css" />
     <link rel="stylesheet" href="./css/access.css" />
     <link rel="stylesheet" href="./css/plan.css" />
+    <link rel="stylesheet" href="./css/facility.css" />
+    <link rel="stylesheet" href="./css/sightseeing.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <script src="
     https://cdn.jsdelivr.net/npm/fflate@0.8.2/umd/index.min.js
     "></script>
@@ -25,9 +30,10 @@
     <script src="https://unpkg.com/three@0.142.0/examples/js/loaders/EXRLoader.js"></script>
   </head>
   <body>
+    <!-- ヘッダー -->
     <site-header></site-header>
-
     <main>
+      <!-- 風景写真 -->
       <section class="top-page-section">
         <div class="top-images">
           <div class="top-2D">
@@ -46,6 +52,8 @@
           />
         </div>
       </section>
+
+      <!-- 体験セクション -->
       <section class="title-section">
         <img
           src="../assets/images/experience-title.png"
@@ -58,11 +66,13 @@
       </section>
       <section class="events-section">
         <div class="event">
-          <img
-            src="../assets/images/general.png"
-            class="image"
-            alt="将軍体験"
-          />
+          <div class="event-img-wrapper">
+            <img
+              src="../assets/images/general.png"
+              class="image"
+              alt="将軍体験"
+            />
+          </div>
           <div class="event-card">
             <h2 class="event-name">将軍体験</h2>
             <div class="bar"></div>
@@ -70,8 +80,8 @@
               着物を着て、将軍の仕事を体験します。
             </p>
             <div class="prices">
-              <p class="gold">ゴールドコース: 無料</p>
-              <p class="silver">シルバー・スタンダード: 30分 4,000円</p>
+              <p class="event-gold">ゴールドコース: 無料</p>
+              <p class="event-silver">シルバー・スタンダード: 30分 4,000円</p>
             </div>
             <div class="event-detail-icon">
               <img src="../assets/icons/Arrow_right.svg" class="arrow-right" />
@@ -79,7 +89,13 @@
           </div>
         </div>
         <div class="event">
-          <img src="../assets/images/ninja.png" class="image" alt="忍者体験" />
+          <div class="event-img-wrapper">
+            <img
+              src="../assets/images/ninja.png"
+              class="image"
+              alt="忍者体験"
+            />
+          </div>
           <div class="event-card">
             <h2 class="event-name">忍者体験</h2>
             <div class="bar"></div>
@@ -87,8 +103,8 @@
               忍び装束を着て、 忍びの仕事を体験します。
             </p>
             <div class="prices">
-              <p class="gold">ゴールドコース: 無料</p>
-              <p class="silver">シルバー・スタンダード: 30分 4,000円</p>
+              <p class="event-gold">ゴールドコース: 無料</p>
+              <p class="event-silver">シルバー・スタンダード: 30分 4,000円</p>
             </div>
             <div class="event-detail-icon">
               <img src="../assets/icons/Arrow_right.svg" class="arrow-right" />
@@ -96,7 +112,13 @@
           </div>
         </div>
         <div class="event">
-          <img src="../assets/images/bath.png" class="image" alt="天守閣温泉" />
+          <div class="event-img-wrapper">
+            <img
+              src="../assets/images/bath.png"
+              class="image"
+              alt="天守閣温泉"
+            />
+          </div>
           <div class="event-card">
             <h2 class="event-name">天守閣温泉</h2>
             <div class="bar"></div>
@@ -104,8 +126,8 @@
               天守閣・露天風呂に入り、東京の景色を一望できます
             </p>
             <div class="prices">
-              <p class="gold">ゴールドコース: 無料</p>
-              <p class="silver">シルバー・スタンダード: 30分 4,000円</p>
+              <p class="event-gold">ゴールドコース: 無料</p>
+              <p class="event-silver">シルバー・スタンダード: 30分 4,000円</p>
             </div>
             <div class="event-detail-icon">
               <img src="../assets/icons/Arrow_right.svg" class="arrow-right" />
@@ -114,11 +136,13 @@
         </div>
 
         <div class="event">
-          <img
-            src="../assets/images/armor.png"
-            class="image"
-            alt="甲冑・着物体験"
-          />
+          <div class="event-img-wrapper">
+            <img
+              src="../assets/images/armor.png"
+              class="image"
+              alt="甲冑・着物体験"
+            />
+          </div>
           <div class="event-card">
             <h2 class="event-name">甲冑・着物体験</h2>
             <div class="bar"></div>
@@ -126,8 +150,8 @@
               甲冑・着物を着て、 写真撮影ができます。
             </p>
             <div class="prices">
-              <p class="gold">ゴールドコース: 無料</p>
-              <p class="silver">シルバー・スタンダード: 30分 4,000円</p>
+              <p class="event-gold">ゴールドコース: 無料</p>
+              <p class="event-silver">シルバー・スタンダード: 30分 4,000円</p>
             </div>
             <div class="event-detail-icon">
               <img src="../assets/icons/Arrow_right.svg" class="arrow-right" />
@@ -136,11 +160,115 @@
         </div>
       </section>
 
-      <section class="prescribe-section">
-        <p class="prescribe-btn">
-          <a href="#" role="button">ご予約はこちらから</a>
-        </p>
+      <!-- 施設紹介 -->
+      <section class="facility-title-section">
+        <img
+          src="../assets/images/facilities-title.png"
+          class="facilities-title-tag"
+        />
       </section>
+      <section class="facilities-section">
+        <div class="facility-app">
+          <div class="first-line">
+            <div
+              class="facility-item"
+              data-title="食事処"
+              data-color="#FFE4DD"
+              data-bar-color="#BD5B42"
+              data-text="ホテル内の和食レストラン「花水庵」では、旬の食材を使った美しい和食をご堪能いただけます。さらに特別メニューとして、江戸時代の食文化を再現した「昔の味噌鍋」もご用意し、歴史の味わいを現代風にお楽しみいただけます。"
+            >
+              <div class="facility-img">
+                <div class="facility-mini-title">食事処</div>
+                <div class="facility-vector facility-food"></div>
+                <img
+                  src="../assets/images/food.png"
+                  class="facility-image"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="facility-item"
+              data-title="着付け"
+              data-color="#FFFBEC"
+              data-bar-color="#C2AA4E"
+              data-text="当ホテルでは、江戸時代や和の文化に触れる豊富な体験メニューをご用意しています。武士の剣術や着物の着付け、茶道など、幅広い年齢層でお楽しみいただけます。ご家族やご友人と特別なひとときをお過ごしください。"
+            >
+              <div class="facility-img">
+                <div class="facility-mini-title">着付け</div>
+                <div class="facility-vector facility-dressing"></div>
+                <img
+                  src="../assets/images/dressing.png"
+                  class="facility-image"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="facility-item"
+              data-title="部屋"
+              data-color="#FCEEFF"
+              data-bar-color="#B49ABA"
+              data-text="和の趣が漂う「和室」と、モダンで快適な「洋室」からお選びいただけます。和室では畳の香りが心を和ませ、洋室はシンプルなデザインで快適な滞在をお約束します。どちらのお部屋からも日本庭園の美しい景色をご堪能ください。"
+            >
+              <div class="facility-img">
+                <div class="facility-mini-title">部屋</div>
+                <div class="facility-vector facility-room"></div>
+                <img
+                  src="../assets/images/room.png"
+                  class="facility-image"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="second-line">
+            <div
+              class="facility-item"
+              data-title="甲冑販売"
+              data-color="#D4D4CD"
+              data-bar-color="#12120E"
+              data-text="ホテル内の特設ショップ「甲冑ギャラリー」では、美しい職人技が光る本格的な甲冑を販売しております。インテリアとしても存在感があり、日本の歴史や武士の精神を身近に感じていただけるよう、スタッフが丁寧にご紹介いたします。"
+            >
+              <div class="facility-img">
+                <div class="facility-mini-title">甲冑販売</div>
+                <div class="facility-vector facility-armor-sale"></div>
+                <img
+                  src="../assets/images/armor-sale.png"
+                  class="facility-image"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="facility-item"
+              data-title="本屋"
+              data-color="#DCE4DD"
+              data-bar-color="#12120E"
+              data-text="歴史好き必見の「巻物ライブラリー」では、江戸時代の巻物や美しい装丁の歴史・文学書を取り揃えています。伝統的な和紙の巻物を手に取る体験も可能。古の知識や物語に触れ、特別な一冊を見つけてお持ち帰りください。"
+            >
+              <div class="facility-img">
+                <div class="facility-mini-title">本屋</div>
+                <div class="facility-vector facility-bookstore"></div>
+                <img
+                  src="../assets/images/bookstore.png"
+                  class="facility-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="facility-detail">
+          <img />
+          <div class="facility-content">
+            <div class="facility-title">title</div>
+            <div class="facility-bar"></div>
+            <div class="facility-description">description</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 宿泊プランセクション -->
       <section class="title-section">
         <img src="../assets/images/plan-title.png" class="plan-title-img" />
         <h3>
@@ -211,6 +339,114 @@
           <a href="#" role="button">詳細はこちらから</a>
         </p>
       </section>
+
+      <!-- 周辺観光 -->
+      <section class="sightseeing">
+        <img
+          src="../assets/images/sightseeing.png"
+          alt="sightseeing"
+          class="sightseeing-img"
+        />
+        <h2 class="sightseeing-title">
+          江戸の歴史と東京の息吹が交差する場所へ。
+        </h2>
+        <div class="sightseeing-card">
+          <div class="sightseeing-name-wrapper">
+            <img
+              src="../assets/images/paper-lantern.png"
+              alt="paper-lantern"
+              class="sightseeing-icon"
+            />
+            <p class="sightseeing-name">千鳥ヶ淵</p>
+          </div>
+          <div class="sightseeing-detail">
+            <img
+              src="../assets/images/chidorigafuchi.png"
+              alt="chidorigafuchi"
+              class="sightseeing-detail-img"
+            />
+            <div class="sightseeing-fade" data-aos="fade-left">
+              <div class="sightseeing-detail-text-wrapper">
+                <img
+                  src="../assets/icons/cloud.svg"
+                  alt="cloud"
+                  class="sightseeing-detail-icon"
+                />
+                <p class="sightseeing-detail-text">
+                  千鳥ヶ淵は、わしが戦を繰り広げた江戸の近くにある。春の桜、秋の紅葉が美しく、自然の美しさが戦の記憶を忘れさせる地じゃ。ぜひ一度、足を運んでみよ。
+                </p>
+              </div>
+              <div class="sightseeing-character">
+                <img
+                  src="../assets/images/ieyasu.png"
+                  alt="ieyasu"
+                  class="sightseeing-char-img"
+                />
+                <p class="sightseeing-character-name">徳川家初代将軍・家康</p>
+              </div>
+            </div>
+          </div>
+          <div class="sightseeing-basic-information-wrapper">
+            <div class="sightseeing-basic-information">
+              ＜基本情報＞<br />
+              住所：〒102-0091　東京都千代田区三番町2先<br />
+              電話番号：03-3234-1948<br />
+              アクセス：〇都営新宿線東京メトロ東西線・半蔵門線「九段下駅」2番出口より徒歩5分　〇東京メトロ半蔵門線「半蔵門駅」5番出口より徒歩5分
+            </div>
+          </div>
+        </div>
+        <div class="sightseeing-card">
+          <div class="sightseeing-name-wrapper">
+            <img
+              src="../assets/images/paper-lantern.png"
+              alt="paper-lantern"
+              class="sightseeing-icon"
+            />
+            <p class="sightseeing-name">科学技術館</p>
+          </div>
+          <div class="sightseeing-detail">
+            <div class="sightseeing-fade" data-aos="fade-right">
+              <div class="sightseeing-character">
+                <img
+                  src="../assets/images/yoshinonbu.png"
+                  alt="yoshinonbu"
+                  class="sightseeing-char-img"
+                />
+                <p class="sightseeing-character-name">徳川家15代将軍・慶喜</p>
+              </div>
+              <div class="sightseeing-detail-text-wrapper">
+                <img
+                  src="../assets/icons/cloud.svg"
+                  alt="cloud"
+                  class="sightseeing-detail-icon flipped"
+                />
+                <p class="sightseeing-detail-text">
+                  ここ科学技術館は、わし、徳川慶喜も驚く最新技術が集まった場所じゃ。機械やエネルギーなど、多くの展示があり、楽しみながら学べるところじゃ。未来の日本を築く知識を、感じるがよい。
+                </p>
+              </div>
+            </div>
+            <img
+              src="../assets/images/science-museum.png"
+              alt="science-museum"
+              class="sightseeing-detail-img"
+            />
+          </div>
+          <div class="sightseeing-basic-information-wrapper">
+            <div class="sightseeing-basic-information">
+              ＜基本情報＞<br />
+              住所：〒102-0091　東京都千代田区北の丸公園2-1<br />
+              電話番号：03-3212-3939<br />
+              アクセス：〇九段下駅（東京メトロ東西線・半蔵門線、都営新宿線）
+              2番出口より徒歩7分　〇竹橋駅（東京メトロ東西線）1b出口より徒歩10分<br />
+              <span class="sightseeing-basic-information-span"
+                >〇神保町駅（東京メトロ半蔵門線・都営三田線・都営新宿線）A1出口より徒歩13分</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- アクセス -->
       <section class="access-section">
         <div class="access">
           <p class="hotel-name">江戸城ホテル</p>
@@ -236,7 +472,6 @@
             </div>
           </div>
         </div>
-
         <div id="map">
           <script>
             function initMap() {
@@ -259,10 +494,18 @@
         </div>
       </section>
     </main>
+    <!-- フッター -->
     <site-footer></site-footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
+    <script src="../js/facility.js"></script>
     <script src="js/component/header.js"></script>
     <script src="js/component/footer.js"></script>
     <script src="js/top.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
