@@ -19,22 +19,25 @@ p {
 }
 
 .events-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 404px);
+  gap: 48px 100px;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  max-width: 828px;
+  margin: 0 auto;
+  padding: 24.5px;
 }
 
 .event {
   width: 404px;
   height: fit-content;
-  margin: 24.5px 49px;
   text-align: center;
-  border: 1px solid;
-  border-color: white;
+  border: 1px solid white;
   transition: 1s;
   overflow: hidden;
+  margin: 0;
 }
+
 .event-img-wrapper {
   width: 404px;
   height: 320px;
@@ -56,7 +59,7 @@ p {
   margin: 0;
 }
 
-.gold {
+.event-gold {
   background-color: #e6ba5d;
   color: white;
   border: none;
@@ -69,7 +72,7 @@ p {
   width: 250px;
 }
 
-.silver {
+.event-silver {
   background-color: #d8d8d8;
   color: white;
   border: none;
