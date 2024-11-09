@@ -37,7 +37,7 @@ class SiteHeader extends HTMLElement {
                         </a>
                     </div>
                 </div>
-            `;
+    `;
 
     const style = document.createElement("style");
     style.textContent = `
