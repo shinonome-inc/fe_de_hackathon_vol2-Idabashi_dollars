@@ -7,7 +7,7 @@ class SiteHeader extends HTMLElement {
     const headerHTML = `
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
                 <div class="header">
-                    <a href="index.html">
+                    <a href="index.html" class="logo">
                         <img src="../../assets/icons/home_logo.svg" alt="home_logo" class="logo">
                     </a>
                     <nav class="nav">
@@ -21,11 +21,15 @@ class SiteHeader extends HTMLElement {
                     </nav>
                     <div class="actions">
                         <a href="reserve.html" class="action-button reserve">
-                            <img src="../../assets/icons/cart_icon.svg" class="icon" alt="Cart">
+                        <div class="icon-wrapper">
+                            <img src="../../assets/icons/cart_icon.svg" class="cart-icon" alt="Cart">
+                        </div>
                             <span class="text">予約する</span>
                         </a>
                         <a href="confirm.html" class="action-button confirm">
-                            <img src="../../assets/icons/infomation_icon.svg" class="icon" alt="Info">
+                            <div class="icon-wrapper">
+                                <img src="../../assets/icons/information_icon.svg" class="information-icon" alt="Info">
+                            </div>
                             <span class="text">
                                 <span class="small-text">予約済み情報を</span><br>
                                 <span class="large-text">確認する</span>
@@ -45,7 +49,7 @@ class SiteHeader extends HTMLElement {
                     display: flex;
                     align-items: flex-start;
                     background-color: #FFFFFF;
-                    height: 100px;
+                    height: 50px;
                     position: relative;
                     padding-left: 0;
                     overflow: visible;
@@ -53,13 +57,13 @@ class SiteHeader extends HTMLElement {
                 .logo {
                     width: 100px;
                     height: 100px;
-                    margin-right: 10px;
                 }
                 .nav {
                     flex: 1;
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
+                    height: 50px;
                 }
                 .nav-item, .nav-item-plan {
                     text-decoration: none;
@@ -86,7 +90,7 @@ class SiteHeader extends HTMLElement {
                     color: #333;
                     font-weight: bold;
                     font-size: 14px;
-                    padding: 10px 20px;
+                    padding: 5px 20px;
                     position: relative;
                     display: flex;
                     align-items: center;
@@ -103,11 +107,25 @@ class SiteHeader extends HTMLElement {
                     height: 2px;
                     background-color: #333;
                 }
+                .icon-wrapper{
+                    display: flex;
+                    padding: 10px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    flex-shrink: 0;
+                    border-right: 1px solid rgba(255, 255, 255, 0.70);
+                }
                 .icon {
                     width: 20px;
                     height: 20px;
                     padding: 10px;
                     vertical-align: middle;
+                }
+                .cart-icon {
+                    width: 28px;
+                    height: 28px;
                 }
                 .actions {
                     display: flex;
@@ -121,13 +139,12 @@ class SiteHeader extends HTMLElement {
                     font-weight: bold;
                     font-size: 14px;
                     transition: background-color 0.3s;
-                    padding: 0 20px;
-                    gap: 8px;
                     position: relative;
                     height: 50px;
                 }
                 .text {
                     text-align: center;
+                    width: 129px;
                 }
                 .small-text {
                     font-size: 10px;
