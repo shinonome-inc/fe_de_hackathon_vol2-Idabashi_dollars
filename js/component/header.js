@@ -7,25 +7,25 @@ class SiteHeader extends HTMLElement {
     const headerHTML = `
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
                 <div class="header">
-                    <div class="logo">
-                        <img src="../assets/icons/home_logo.svg" alt="home_logo">
-                    </div>
+                    <a href="index.html">
+                        <img src="../../assets/icons/home_logo.svg" alt="home_logo" class="logo">
+                    </a>
                     <nav class="nav">
                         <a href="experience.html" class="nav-item" data-name="event">イベント紹介</a>
                         <a href="facility.html" class="nav-item" data-name="facility">施設紹介</a>
                         <a href="access.html" class="nav-item" data-name="access">アクセス・周辺紹介</a>
                         <a href="plan.html" class="nav-item nav-item-plan" data-name="plan">プラン・価格</a>
                         <a href="login.html" class="nav-item-login" data-name="login">
-                            <img src="../assets/icons/person_icon.svg" class="icon" alt="person"> ログイン／新規登録
+                            <img src="../../assets/icons/person_icon.svg" class="icon" alt="person"> ログイン／新規登録
                         </a>
                     </nav>
                     <div class="actions">
                         <a href="reserve.html" class="action-button reserve">
-                            <img src="../assets/icons/cart_icon.svg" class="icon" alt="Cart">
+                            <img src="../../assets/icons/cart_icon.svg" class="icon" alt="Cart">
                             <span class="text">予約する</span>
                         </a>
                         <a href="confirm.html" class="action-button confirm">
-                            <img src="../assets/icons/infomation_icon.svg" class="icon" alt="Info">
+                            <img src="../../assets/icons/infomation_icon.svg" class="icon" alt="Info">
                             <span class="text">
                                 <span class="small-text">予約済み情報を</span><br>
                                 <span class="large-text">確認する</span>
@@ -43,28 +43,17 @@ class SiteHeader extends HTMLElement {
                 }
                 .header {
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     background-color: #FFFFFF;
-                    height: 50px;
+                    height: 100px;
                     position: relative;
-                    padding-left: 60px;
+                    padding-left: 0;
                     overflow: visible;
                 }
                 .logo {
                     width: 100px;
                     height: 100px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    transform: translate(0, 10px);
-                }
-                .logo img {
-                    max-width: 100%;
-                    max-height: 100%;
-                    object-fit: contain;
+                    margin-right: 10px;
                 }
                 .nav {
                     flex: 1;
@@ -135,6 +124,7 @@ class SiteHeader extends HTMLElement {
                     padding: 0 20px;
                     gap: 8px;
                     position: relative;
+                    height: 50px;
                 }
                 .text {
                     text-align: center;
