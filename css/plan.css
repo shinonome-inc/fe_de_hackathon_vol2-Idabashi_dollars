@@ -21,24 +21,60 @@ body {
 
 .plans-section {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 16px 0px 32px 0px;
+  align-items: center;
+  justify-self: center;
+  gap: 48px;
 }
 
 .plan {
   width: 320px;
-  height: fit-content;
-  margin: 24.5px 49px;
-  text-align: center;
-  border: 1px solid;
-  border-color: white;
+  height: 320px;
   transition: 1s;
+  border: 5px solid #fff;
+}
+.plan-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.plan-title {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.gold-vector {
+  position: absolute;
+  top: 0;
+  border-left: 160px solid #c2a538;
+  border-bottom: 160px solid transparent;
+  z-index: 1;
+}
+.silver-vector {
+  position: absolute;
+  top: 0;
+  border-left: 160px solid #837d76;
+  border-bottom: 160px solid transparent;
+  z-index: 1;
+}
+.standard-vector {
+  position: absolute;
+  top: 0;
+  border-left: 160px solid #5d4538;
+  border-bottom: 160px solid transparent;
+  z-index: 1;
 }
 
 .image {
-  width: 100%;
+  width: 320px;
   height: 320px;
+  object-fit: cover;
 }
 
 .detail-section {
