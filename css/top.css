@@ -8,6 +8,7 @@ main {
 
 .top-images {
   position: relative;
+  height: 90vh;
 }
 
 .background-2Dimage {
@@ -21,6 +22,7 @@ main {
   position: absolute;
   right: 100px;
   bottom: 100px;
+  cursor: pointer;
 }
 
 .top-welcome {
@@ -39,4 +41,8 @@ main {
   text-shadow: 1px 1px 0 #a88502b2, -1px 1px 0 #a88502b2, 1px -1px 0 #a88502b2,
     -1px -1px 0 #a88502b2, 0 1px 0 #a88502b2, 0 -1px 0 #a88502b2,
     1px 0 0 #a88502b2, -1px 0 0 #a88502b2;
+}
+
+#myCanvas {
+  cursor: grab;
 }
