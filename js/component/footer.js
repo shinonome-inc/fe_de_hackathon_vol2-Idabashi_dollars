@@ -51,7 +51,8 @@ class SiteFooter extends HTMLElement {
           padding: 10px;
             padding-right: 100px;
             padding-left: 100px;
-          font-family: "Noto Sans JP";
+            font-family: "Noto Sans JP";
+            background: rgba(255, 255, 255, 0.81);
         }
   
         .border {
