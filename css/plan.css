@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #efe7d7;
+}
+
+.title-section {
+  text-align: center;
+  padding: 49px;
+}
+
+.plan-title-img {
+  width: 391px;
+  height: 167px;
+  display: block;
+  margin: auto;
+  padding-bottom: 29px;
+}
+
+.plans-section {
+  display: flex;
+  padding: 16px 0px 32px 0px;
+  align-items: center;
+  justify-self: center;
+  gap: 48px;
+}
+
+.plan {
+  width: 320px;
+  height: fit-content;
+  transition: 1s;
+  border: 5px solid #fff;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  border-top: 5px solid #fff;
+  padding: 5px 12px;
+}
+.gold-background {
+  background-color: #feeeb7;
+}
+
+.silver-background {
+  background-color: #ddd8ce;
+}
+
+.standard-background {
+  background-color: #ebe4c9b2;
+}
+
+.bar {
+  width: 75px;
+  height: 2px;
+}
+
+.gold {
+  background: #a88502b2;
+}
+.silver {
+  background: #837d76;
+}
+.standard {
+  background: #5e4538;
+}
+
+.plan-img {
+  overflow: hidden;
+  position: relative;
+  height: 320px;
+}
+
+.detail-plan-title {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.detail-plan {
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1.12px;
+}
+
+.plan-title {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.gold-vector {
+  position: absolute;
+  top: 0;
+  border-left: 160px solid #c2a538;
+  border-bottom: 160px solid transparent;
+  z-index: 1;
+}
+.silver-vector {
+  position: absolute;
+  top: 0;
+  border-left: 160px solid #837d76;
+  border-bottom: 160px solid transparent;
+  z-index: 1;
+}
+.standard-vector {
+  position: absolute;
+  top: 0;
+  border-left: 160px solid #5d4538;
+  border-bottom: 160px solid transparent;
+  z-index: 1;
+}
+
+.image {
+  transition: ease 0.5s;
+  height: 320px;
+  object-fit: cover;
+}
+.image:hover {
+  transform: scale(1.2);
+}
+
+.detail-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.detail-btn a {
+  display: inline-block;
+  padding: 32px 122px;
+  font-size: 18px;
+  background-color: #6e987c;
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.detail-btn a:hover {
+  background: #058011;
+}
