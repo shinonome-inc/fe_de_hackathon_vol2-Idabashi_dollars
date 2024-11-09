@@ -25,13 +25,16 @@ class SiteFooter extends HTMLElement {
                 <a href="#" class="nav-link"><img src="../../assets/icons/vector9.svg" alt="矢印" class="arrow-icon">価格・プラン</a>
               </div>
             </div>
-            
             <div class="button-section">
-              <a href="#" class="button faq">
-                <img src="../../assets/icons/help.svg" alt="質問マーク" class="help-icon">
-                よくある質問
-              <a href="#" class="button english"><img src="../../assets/icons/vector9.svg" alt="矢印" class="arrow-icon">　　ENGLISH</a>
-            </div>
+                <a href="#" class="button faq">
+                  <img
+                    src="../../assets/icons/help.svg"
+                    alt="質問マーク"
+                    class="help-icon"
+                  />
+                  よくある質問
+                </a>
+              </div>
           </div>
           <div class="border"></div>
           <div class="copyright">
@@ -88,12 +91,6 @@ class SiteFooter extends HTMLElement {
           white-space: nowrap;
         }
   
-        .button-section {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-        }
-  
         .button {
           display: flex;
           align-items: center;
@@ -108,6 +105,7 @@ class SiteFooter extends HTMLElement {
         .button.faq {
           gap: 5px;
           background: #BEBEBE;
+          font-size: 14px;
         }
         .button.english {
             gap: 5px;
@@ -122,11 +120,13 @@ class SiteFooter extends HTMLElement {
         .contact-info p {
           margin: 5px 0;
           white-space: nowrap;
+          color: #515151;
         }
   
         .copyright {
           text-align: right;
           padding: 10px 40px;
+          color: #515151;
         }
   
         .arrow-icon {
