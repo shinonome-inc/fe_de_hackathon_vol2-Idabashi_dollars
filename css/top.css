@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+}
+
+main {
+  text-align: center;
+}
+
+.top-images {
+  position: relative;
+}
+
+.edo-castle {
+  width: 1280px;
+  height: 850px;
+}
+
+#change-button {
+  position: absolute;
+  right: 160px;
+  bottom: 55px;
+}
+
+#change-button:active {
+  position: absolute;
+  right: 160px;
+  bottom: 55px;
+  background-image: url("../assets/images/3D-button.png");
+}
