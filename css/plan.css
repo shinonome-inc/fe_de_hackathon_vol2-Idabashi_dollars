@@ -29,13 +29,69 @@ body {
 
 .plan {
   width: 320px;
-  height: 320px;
+  height: fit-content;
   transition: 1s;
   border: 5px solid #fff;
+  position: relative;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  border-top: 5px solid #fff;
+  padding: 5px 12px;
+}
+.gold-background {
+  background-color: #feeeb7;
+}
+
+.silver-background {
+  background-color: #ddd8ce;
+}
+
+.standard-background {
+  background-color: #ebe4c9b2;
+}
+
+.bar {
+  width: 75px;
+  height: 2px;
+}
+
+.gold {
+  background: #a88502b2;
+}
+.silver {
+  background: #837d76;
+}
+.standard {
+  background: #5e4538;
+}
+
 .plan-img {
   overflow: hidden;
   position: relative;
+  height: 320px;
+}
+
+.detail-plan-title {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.detail-plan {
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1.12px;
 }
 
 .plan-title {
@@ -72,9 +128,12 @@ body {
 }
 
 .image {
-  width: 320px;
+  transition: ease 0.5s;
   height: 320px;
   object-fit: cover;
+}
+.image:hover {
+  transform: scale(1.2);
 }
 
 .detail-section {
@@ -93,6 +152,5 @@ body {
 }
 
 .detail-btn a:hover {
-  background-color: green;
-  transform: scale(1.1);
+  background: #058011;
 }
