@@ -1,40 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #eddec1;
-}
-
-.hover-content-food {
-  background-color: #ffe4dd;
-}
-
-.hover-content-dressing {
-  background-color: #fffbec;
-}
-
-.hover-content-room {
-  background-color: #fceeff;
-}
-
-.hover-content-armor-sale {
-  background-color: #d4d4cd;
-}
-
-.hover-content-bookstore {
-  background-color: #dce4dd;
-}
-
-.content-name {
-  width: 100px;
-  padding: 10px;
-  margin: 0px auto 20px;
-  border-bottom: solid 1px #c2aa4e;
-}
-
-.title-section {
+.facility-title-section {
   text-align: center;
   padding: 49px;
 }
@@ -50,21 +14,156 @@ body {
 .facilities-section {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-}
-
-.facility {
-  width: 320px;
-  height: fit-content;
-  margin: 24.5px 49px;
-  text-align: center;
-  border: 1px solid;
-  border-color: white;
-  transition: 1s;
-}
-
-.image {
-  display: block;
   width: 100%;
+  margin-bottom: 60px;
+}
+
+html,
+body,
+main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background: #eddec1;
+  color: white;
+  font-size: 14px;
+}
+
+.facility-image {
   height: 320px;
+  width: 320px;
+}
+
+.facility-app {
+  background: #eddec1;
+  position: relative;
+  overflow: auto;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.first-line {
+  display: flex;
+  gap: 50px;
+}
+.second-line {
+  display: flex;
+  gap: 90px;
+  justify-content: center;
+}
+.facility-item {
+  cursor: pointer;
+  font-size: 0;
+  border: 5px solid #fff;
+  width: 320px;
+}
+
+.facility-item > img {
+  width: 320px;
+  height: 320px;
+}
+.facility-detail {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  width: 320px;
+  cursor: pointer;
+  font-size: 0;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.facility-detail > img {
+  position: relative;
+  z-index: 1;
+  width: 310px;
+  height: 310px;
+  flex-shrink: 0;
+  border: 5px solid #fff;
+}
+
+.facility-detail .facility-content {
+  box-sizing: border-box;
+  flex-grow: 1;
+  color: #000;
+}
+
+.facility-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 5px 0 10px 0;
+  border-bottom: 5px solid #fff;
+  border-left: 5px solid #fff;
+  border-right: 5px solid #fff;
+}
+
+.facility-detail .facility-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.facility-bar {
+  width: 75px;
+  height: 2px;
+}
+
+.facility-detail .facility-description {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1.12px;
+  width: 292px;
+}
+.facility-img {
+  overflow: hidden;
+  position: relative;
+}
+.facility-mini-title {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  z-index: 2;
+}
+.facility-vector {
+  position: absolute;
+  top: 0;
+  border-bottom: 160px solid transparent;
+  z-index: 1;
+}
+.facility-food {
+  border-left: 160px solid rgba(168, 31, 2, 0.7);
+}
+.facility-dressing {
+  border-left: 160px solid rgba(168, 133, 2, 0.7);
+}
+.facility-room {
+  border-left: 160px solid rgba(166, 129, 175, 0.7);
+}
+.facility-armor-sale {
+  border-left: 160px solid rgba(0, 0, 0, 0.3);
+}
+
+.facility-bookstore {
+  border-left: 160px solid rgba(110, 152, 124, 0.6);
 }

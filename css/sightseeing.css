@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+}
+.sightseeing {
+  background: #eddec1;
+  padding: 48px 101px 80px 101px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sightseeing-img {
+  width: 391px;
+  height: 167px;
+}
+
+.sightseeing-title {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  display: flex;
+  height: 72px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sightseeing-card {
+  display: flex;
+  padding-bottom: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+.sightseeing-name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.sightseeing-name {
+  color: #000;
+  text-align: center;
+  font-size: 32px;
+  line-height: 24px;
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+}
+.sightseeing-icon {
+  width: 24.5x;
+  height: 55.5px;
+}
+.sightseeing-detail-text-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+.sightseeing-detail-icon {
+  width: 600px;
+  height: 300px;
+  flex-shrink: 0;
+  fill: rgba(0, 0, 0, 0.84);
+}
+.sightseeing-detail-text {
+  position: absolute;
+  text-align: center;
+  top: 130px;
+  left: 40px;
+  color: #fff;
+  width: 500px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  background: #222;
+}
+.sightseeing-detail {
+  display: flex;
+  gap: 10px;
+}
+.sightseeing-character-name {
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+}
+.sightseeing-fade {
+  display: flex;
+  gap: 10px;
+}
+.sightseeing-basic-information {
+  color: #000;
+  font-size: 12px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding: 3px 10px;
+  width: fit-content;
+}
+.sightseeing-basic-information-wrapper {
+  padding-top: 25px;
+  width: 100%;
+}
+.flipped {
+  transform: scaleX(-1);
+}
+
+.sightseeing-basic-information-span {
+  padding-left: 5em;
+}
