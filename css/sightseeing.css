@@ -103,3 +103,7 @@
 .flipped {
   transform: scaleX(-1);
 }
+
+.sightseeing-basic-information-span {
+  padding-left: 5em;
+}
