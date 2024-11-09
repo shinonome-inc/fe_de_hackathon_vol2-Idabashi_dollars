@@ -1,10 +1,12 @@
-const items = gsap.utils.toArray(".item"),
-  details = document.querySelector(".detail"),
-  detailContent = document.querySelector(".content"),
-  detailImage = document.querySelector(".detail img"),
-  detailTitle = document.querySelector(".detail .title"),
-  detailDescription = document.querySelector(".detail .description"),
-  detailPlanTitle = document.querySelector(".detail .plan-title");
+const items = gsap.utils.toArray(".facility-item"),
+  details = document.querySelector(".facility-detail"),
+  detailContent = document.querySelector(".facility-content"),
+  detailImage = document.querySelector(".facility-detail img"),
+  detailTitle = document.querySelector(".facility-detail .facility-title"),
+  detailDescription = document.querySelector(
+    ".facility-detail .facility-description"
+  ),
+  detailPlanTitle = document.querySelector(".facility-detail .facility-title");
 
 let activeItem;
 
@@ -31,9 +33,7 @@ function showDetails(item) {
       scale: 0.8,
       onComplete: () => gsap.set(details, { overflow: "auto" }),
     }).to(detailContent, { yPercent: 0 }, 0.2);
-    const vectorColor = item.dataset.vectorColor;
-    const vectorElement = details.querySelector(".vector");
-    vectorElement.style.borderLeft = `160px solid ${vectorColor}`;
+
     detailImage.removeEventListener("load", onLoad);
     document.addEventListener("click", hideDetails);
   };
@@ -43,9 +43,8 @@ function showDetails(item) {
   detailImage.src = item.querySelector("img").src;
   detailTitle.innerText = data.title;
   detailDescription.innerText = data.text;
-  detailPlanTitle.innerText = data.title;
   detailContent.style.backgroundColor = data.color;
-  const bar = document.querySelector(".bar");
+  const bar = document.querySelector(".facility-bar");
   bar.style.backgroundColor = data.barColor;
   gsap
     .to(items, {
@@ -53,7 +52,7 @@ function showDetails(item) {
       stagger: { amount: 0.7, from: items.indexOf(item), grid: "auto" },
     })
     .kill(item);
-  gsap.to(".app", {
+  gsap.to(".facility-app", {
     backgroundColor: "#eddec1",
     duration: 1,
     delay: 0.3,
@@ -77,7 +76,7 @@ function hideDetails() {
         grid: "auto",
       },
     })
-    .to(".app", { backgroundColor: "#eddec1" }, "<");
+    .to(".facility-app", { backgroundColor: "#eddec1" }, "<");
   Flip.from(state, {
     scale: true,
     duration: 0.5,
@@ -88,10 +87,10 @@ function hideDetails() {
 }
 
 gsap.utils
-  .toArray(".item")
+  .toArray(".facility-item")
   .forEach((item) => item.addEventListener("click", () => showDetails(item)));
 
 window.addEventListener("load", () => {
-  gsap.to(".app", { autoAlpha: 1, duration: 0.2 });
-  gsap.from(".item", { autoAlpha: 0, yPercent: 30, stagger: 0.04 });
+  gsap.to(".facility-app", { autoAlpha: 1, duration: 0.2 });
+  gsap.from(".facility-item", { autoAlpha: 0, yPercent: 30, stagger: 0.04 });
 });
