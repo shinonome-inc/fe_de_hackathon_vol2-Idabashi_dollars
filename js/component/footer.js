@@ -45,8 +45,9 @@ class SiteFooter extends HTMLElement {
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
   
         .site-footer {
-          padding: 10px 0;
-          width: 100%;
+          padding: 10px;
+            padding-right: 100px;
+            padding-left: 100px;
           font-family: "Noto Sans JP";
         }
   
