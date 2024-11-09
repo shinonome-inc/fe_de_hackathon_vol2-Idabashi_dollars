@@ -100,45 +100,6 @@ function init() {
     particlesMaterial
   );
   scene.add(fallingParticles);
-  const horizontalParticleCount = 1; // 新しいパーティクルの数
-  const horizontalParticlesGeometry = new THREE.BufferGeometry();
-  const horizontalParticlesMaterial = new THREE.PointsMaterial({
-    color: 0xffffff, // 青っぽい色
-    size: 3000,
-    transparent: true,
-    opacity: 0.2,
-    depthWrite: false,
-  });
-
-  const horizontalPositions = [];
-  const horizontalOffsets = []; // 横方向のオフセットを管理
-  const innerRadius = 550; // ドーナツの内半径
-  const outerRadius = 800; // ドーナツの外半径
-  for (let i = 0; i < horizontalParticleCount; i++) {
-    let x, y, z, distance;
-
-    // ドーナツ状の範囲にのみ配置
-    do {
-      x = (Math.random() - 0.5) * 2 * outerRadius; // X軸にランダム配置
-      y = (Math.random() - 0.5) * 2 * outerRadius; // Y軸にランダム配置
-      z = (Math.random() - 0.5) * 2 * outerRadius; // Z軸にランダム配置
-      distance = Math.sqrt(x * x + z * z); // 平面上の距離を計算
-    } while (distance < innerRadius || distance > outerRadius); // 内半径～外半径の範囲内に収める
-
-    horizontalPositions.push(x, y, z);
-    horizontalOffsets.push(Math.random() * 2 * Math.PI);
-  }
-
-  horizontalParticlesGeometry.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(horizontalPositions, 3)
-  );
-
-  const horizontalParticles = new THREE.Points(
-    horizontalParticlesGeometry,
-    horizontalParticlesMaterial
-  );
-  scene.add(horizontalParticles);
 
   tick();
   function tick() {
@@ -201,33 +162,7 @@ function init() {
       }
     }
     particlesGeometry.attributes.position.needsUpdate = true;
-    // 新しいパーティクルの動き
-    const horizontalPositions =
-      horizontalParticlesGeometry.attributes.position.array;
-    for (let i = 0; i < horizontalPositions.length; i += 3) {
-      horizontalPositions[i] += Math.sin(time + horizontalOffsets[i / 3]) * 0.5; // X方向の振動
-      horizontalPositions[i + 2] +=
-        Math.cos(time + horizontalOffsets[i / 3]) * 0.5; // Z方向の振動
 
-      // 内外の範囲に収める
-      const currentDistance = Math.sqrt(
-        horizontalPositions[i] ** 2 + horizontalPositions[i + 2] ** 2
-      );
-      if (currentDistance < innerRadius || currentDistance > outerRadius) {
-        const angle = Math.atan2(
-          horizontalPositions[i + 2],
-          horizontalPositions[i]
-        );
-        horizontalPositions[i] =
-          Math.cos(angle) *
-          (Math.random() * (outerRadius - innerRadius) + innerRadius);
-        horizontalPositions[i + 2] =
-          Math.sin(angle) *
-          (Math.random() * (outerRadius - innerRadius) + innerRadius);
-      }
-    }
-
-    horizontalParticlesGeometry.attributes.position.needsUpdate = true;
     // シーンのレンダリング
     renderer.render(scene, camera);
     requestAnimationFrame(tick);

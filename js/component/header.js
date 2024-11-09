@@ -53,6 +53,7 @@ class SiteHeader extends HTMLElement {
                     position: relative;
                     padding-left: 0;
                     overflow: visible;
+                    z-index: 10;
                 }
                 .logo {
                     width: 100px;
