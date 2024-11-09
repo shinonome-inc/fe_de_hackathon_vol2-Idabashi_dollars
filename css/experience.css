@@ -33,14 +33,15 @@ p {
   border: 1px solid;
   border-color: white;
   transition: 1s;
+  overflow: hidden;
 }
-
-.event:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+.event-img-wrapper {
+  width: 404px;
+  height: 320px;
+  overflow: hidden;
 }
 .image {
-  width: 100%;
+  width: 404px;
   height: 212px;
 }
 
