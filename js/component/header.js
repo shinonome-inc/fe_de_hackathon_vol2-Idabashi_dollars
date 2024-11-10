@@ -12,7 +12,7 @@ class SiteHeader extends HTMLElement {
                     </a>
                     <nav class="nav">
                         <a href="#" class="nav-item" data-name="event">イベント紹介</a>
-                        <a href="# class="nav-item" data-name="facility">施設紹介</a>
+                        <a href="#" class="nav-item" data-name="facility">施設紹介</a>
                         <a href="#" class="nav-item" data-name="access">アクセス・周辺紹介</a>
                         <a href="#" class="nav-item nav-item-plan" data-name="plan">プラン・価格</a>
                         <a href="#" class="nav-item-login" data-name="login">
