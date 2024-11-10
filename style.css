@@ -303,8 +303,8 @@ body {
 .facility-detail > img {
   position: relative;
   z-index: 1;
-  width: 310px;
-  height: 310px;
+  width: 320px;
+  height: 320px;
   flex-shrink: 0;
   border: 5px solid var(--white);
 }
