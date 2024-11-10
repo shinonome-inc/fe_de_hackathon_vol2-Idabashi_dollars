@@ -10,9 +10,9 @@ class SiteFooter extends HTMLElement {
           <div class="footer-container">
             <div class="footer-content">
               <div class="nav-section">
-                <a href="#" class="nav-link"><img src="../../assets/icons/vector9.svg" alt="矢印" class="arrow-icon">トップ</a>
-                <a href="#" class="nav-link"><img src="../../assets/icons/vector9.svg" alt="矢印" class="arrow-icon">イベント紹介</a>
-                <a href="#" class="nav-link"><img src="../../assets/icons/vector9.svg" alt="矢印" class="arrow-icon">施設紹介</a>
+                <a href="#" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">トップ</a>
+                <a href="#" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">イベント紹介</a>
+                <a href="#" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">施設紹介</a>
                 
                 <div class="contact-info">
                   <p>- 〒100-8111 東京都千代田区千代田1-1</p>
@@ -21,14 +21,14 @@ class SiteFooter extends HTMLElement {
               </div>
               
               <div class="nav-section">
-                <a href="#" class="nav-link"><img src="../../assets/icons/vector9.svg" alt="矢印" class="arrow-icon">アクセス</a>
-                <a href="#" class="nav-link"><img src="../../assets/icons/vector9.svg" alt="矢印" class="arrow-icon">価格・プラン</a>
+                <a href="#" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">アクセス</a>
+                <a href="#" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">価格・プラン</a>
               </div>
             </div>
             <div class="button-section">
                 <a href="#" class="button faq">
                   <img
-                    src="../../assets/icons/help.svg"
+                    src="/assets/icons/help.svg"
                     alt="質問マーク"
                     class="help-icon"
                   />
