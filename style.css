@@ -298,6 +298,7 @@ body {
   visibility: hidden;
   max-height: 100vh;
   overflow: auto;
+  z-index: 2;
 }
 
 .facility-detail > img {
