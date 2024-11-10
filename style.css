@@ -1,0 +1,731 @@
+:root {
+  --black: #000000;
+  --black30: rgba(0, 0, 0, 0.3);
+  --black100: #12120e;
+  --black200: #222;
+  --black300: #383838;
+  --red70: rgba(168, 31, 2, 0.7);
+  --red100: #ffe4dd;
+  --red200: #bd5b42;
+  --yellow100: #f0d8a7;
+  --yellow200: #efe7d7;
+  --yellow300: #fef2dc;
+  --yellow400: #e8be6b;
+  --white: #ffffff;
+  --gold: #e6ba5d;
+  --gold70: rgba(168, 133, 2, 0.7);
+  --gold100: #fffbec;
+  --gold200: #c2aa4e;
+  --gold300: #c2a538;
+  --gold400: #feeeb7;
+  --silver: #d8d8d8;
+  --silver100: #ddd8ce;
+  --silver200: #837d76;
+  --green: #6e987c;
+  --green60: rgba(110, 152, 124, 0.6);
+  --green100: #dce4dd;
+  --green200: #9ab09c;
+  --purple: rgba(166, 129, 175, 0.7);
+  --purple100: #fceeff;
+  --purple200: #b49aba;
+  --gray100: #d4d4cd;
+  --gray200: #76738a;
+  --brown100: #5e4538;
+  --brown200: #ebe4c9b2;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--yellow200);
+}
+
+/* 風景写真 */
+.top-images {
+  position: relative;
+  height: 90vh;
+}
+
+.background-2Dimage {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 90vh;
+}
+
+.top-2D-to-3D-button {
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  cursor: pointer;
+}
+
+.top-welcome {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  color: var(--yellow100);
+  text-align: center;
+  -webkit-text-stroke-width: 2;
+  -webkit-text-stroke-color: var(--gold70);
+  font-family: "Kaisei HarunoUmi";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 80px;
+  text-shadow: 1px 1px 0 #a88502b2, -1px 1px 0 #a88502b2, 1px -1px 0 #a88502b2,
+    -1px -1px 0 #a88502b2, 0 1px 0 #a88502b2, 0 -1px 0 #a88502b2,
+    1px 0 0 #a88502b2, -1px 0 0 #a88502b2;
+}
+
+#myCanvas {
+  cursor: grab;
+}
+
+/* 体験セクション */
+.title-section {
+  text-align: center;
+  padding: 49px;
+}
+
+.experience-title_img {
+  width: 391px;
+  height: 167px;
+  display: block;
+  margin: auto;
+  padding-bottom: 29px;
+}
+
+.events-section {
+  display: grid;
+  grid-template-columns: repeat(2, 404px);
+  gap: 48px 100px;
+  justify-content: center;
+  max-width: 828px;
+  margin: 0 auto;
+  padding: 24.5px;
+}
+
+.event {
+  width: 404px;
+  height: fit-content;
+  text-align: center;
+  border: 1px solid white;
+  transition: 1s;
+  overflow: hidden;
+  margin: 0;
+}
+
+.event-img-wrapper {
+  width: 404px;
+  height: 320px;
+  overflow: hidden;
+}
+.image {
+  width: 404px;
+  height: 212px;
+}
+
+.prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.prices p {
+  margin: 0;
+}
+
+.event-gold {
+  background-color: var(--gold);
+  color: white;
+  border: none;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 1.12px;
+  width: 250px;
+}
+
+.event-silver {
+  background-color: var(--silver);
+  color: white;
+  border: none;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 1.12px;
+  width: 250px;
+}
+
+.prescribe-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.prescribe-btn a {
+  display: inline-block;
+  padding: 32px 122px;
+  font-size: 18px;
+  background-color: var(--green);
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.prescribe-btn a:hover {
+  background-color: green;
+  transform: scale(1.1);
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.event-name {
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.bar {
+  width: 75px;
+  height: 2px;
+  background: var(--white);
+}
+
+.event-description {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1.12px;
+}
+
+.arrow-right {
+  width: 18px;
+  height: 16px;
+  background: var(--gold);
+}
+
+.event-detail-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+
+/* 施設紹介 */
+.facility-title-section {
+  text-align: center;
+  padding: 49px;
+  background: #eddec1;
+}
+
+.facilities-title-tag {
+  width: 391px;
+  height: 167px;
+  display: block;
+  margin: auto;
+  padding-bottom: 29px;
+}
+
+.facilities-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 70px;
+  background: #eddec1;
+}
+
+.facility-image {
+  height: 320px;
+  width: 320px;
+}
+
+.facility-app {
+  background: #eddec1;
+  position: relative;
+  overflow: auto;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.first-line {
+  display: flex;
+  gap: 50px;
+}
+.second-line {
+  display: flex;
+  gap: 90px;
+  justify-content: center;
+}
+.facility-item {
+  cursor: pointer;
+  font-size: 0;
+  border: 5px solid var(--white);
+  width: 320px;
+}
+
+.facility-item > img {
+  width: 320px;
+  height: 320px;
+}
+.facility-detail {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  width: 320px;
+  cursor: pointer;
+  font-size: 0;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.facility-detail > img {
+  position: relative;
+  z-index: 1;
+  width: 310px;
+  height: 310px;
+  flex-shrink: 0;
+  border: 5px solid var(--white);
+}
+
+.facility-detail .facility-content {
+  box-sizing: border-box;
+  flex-grow: 1;
+  color: var(--black);
+}
+
+.facility-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 5px 0 10px 0;
+  border-bottom: 5px solid var(--white);
+  border-left: 5px solid var(--white);
+  border-right: 5px solid var(--white);
+}
+
+.facility-detail .facility-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.facility-bar {
+  width: 75px;
+  height: 2px;
+}
+
+.facility-detail .facility-description {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1.12px;
+  width: 292px;
+}
+.facility-img {
+  overflow: hidden;
+  position: relative;
+}
+.facility-mini-title {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  color: var(--white);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  z-index: 2;
+}
+.facility-vector {
+  position: absolute;
+  top: 0;
+  border-bottom: 160px solid transparent;
+  z-index: 1;
+}
+.facility-food {
+  border-left: 160px solid var(--red70);
+}
+.facility-dressing {
+  border-left: 160px solid var(--gold70);
+}
+.facility-room {
+  border-left: 160px solid var(--purple);
+}
+.facility-armor-sale {
+  border-left: 160px solid var(--black30);
+}
+
+.facility-bookstore {
+  border-left: 160px solid var(--green60);
+}
+
+/* 宿泊プランセクション */
+.title-section {
+  text-align: center;
+  padding: 49px;
+}
+
+.plan-title-img {
+  width: 391px;
+  height: 167px;
+  display: block;
+  margin: auto;
+  padding-bottom: 29px;
+}
+
+.plans-section {
+  display: flex;
+  padding: 16px 0px 32px 0px;
+  align-items: center;
+  justify-self: center;
+  gap: 48px;
+}
+
+.plan {
+  width: 320px;
+  height: fit-content;
+  transition: 1s;
+  border: 5px solid var(--white);
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  border-top: 5px solid var(--white);
+  padding: 5px 12px;
+}
+.gold-background {
+  background-color: var(--gold400);
+}
+
+.silver-background {
+  background-color: var(--silver100);
+}
+
+.standard-background {
+  background-color: var(--brown200);
+}
+
+.bar {
+  width: 75px;
+  height: 2px;
+}
+
+.gold {
+  background: #a88502b2;
+}
+.silver {
+  background: var(--silver200);
+}
+.standard {
+  background: var(--brown100);
+}
+
+.plan-img {
+  overflow: hidden;
+  position: relative;
+  height: 320px;
+}
+
+.detail-plan-title {
+  color: var(--black);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.detail-plan {
+  color: var(--black);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1.12px;
+}
+
+.plan-title {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  color: var(--white);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.gold-vector {
+  position: absolute;
+  top: 0;
+  border-left: 160px solid var(--gold300);
+  border-bottom: 160px solid transparent;
+  z-index: 1;
+}
+.silver-vector {
+  position: absolute;
+  top: 0;
+  border-left: 160px solid var(--silver200);
+  border-bottom: 160px solid transparent;
+  z-index: 1;
+}
+.standard-vector {
+  position: absolute;
+  top: 0;
+  border-left: 160px solid #5d4538;
+  border-bottom: 160px solid transparent;
+  z-index: 1;
+}
+
+.image {
+  transition: ease 0.5s;
+  height: 320px;
+  object-fit: cover;
+}
+.image:hover {
+  transform: scale(1.2);
+}
+
+.detail-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.detail-btn a {
+  display: inline-block;
+  padding: 32px 122px;
+  font-size: 18px;
+  background-color: var(--green);
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.detail-btn a:hover {
+  background: #058011;
+}
+
+/* 周辺観光セクション */
+.sightseeing {
+  background: #eddec1;
+  padding: 48px 101px 80px 101px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sightseeing-img {
+  width: 391px;
+  height: 167px;
+}
+
+.sightseeing-title {
+  color: var(--black);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  display: flex;
+  height: 72px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sightseeing-card {
+  display: flex;
+  padding-bottom: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+.sightseeing-name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.sightseeing-name {
+  color: var(--black);
+  text-align: center;
+  font-size: 32px;
+  line-height: 24px;
+  border-bottom: 1px solid var(--black);
+  padding: 10px 0;
+}
+.sightseeing-icon {
+  width: 24.5x;
+  height: 55.5px;
+}
+.sightseeing-detail-text-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+.sightseeing-detail-icon {
+  width: 600px;
+  height: 300px;
+  flex-shrink: 0;
+  fill: rgba(0, 0, 0, 0.84);
+}
+.sightseeing-detail-text {
+  position: absolute;
+  text-align: center;
+  top: 130px;
+  left: 40px;
+  color: var(--white);
+  width: 500px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  background: var(--black200);
+}
+.sightseeing-detail {
+  display: flex;
+  gap: 10px;
+}
+.sightseeing-character-name {
+  color: var(--black);
+  font-family: Inter;
+  font-size: 12px;
+}
+.sightseeing-fade {
+  display: flex;
+  gap: 10px;
+}
+.sightseeing-basic-information {
+  color: var(--black);
+  font-size: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--black);
+  padding: 3px 10px;
+  width: fit-content;
+}
+.sightseeing-basic-information-wrapper {
+  padding-top: 25px;
+  width: 100%;
+}
+.flipped {
+  transform: scaleX(-1);
+}
+
+.sightseeing-basic-information-span {
+  padding-left: 5em;
+}
+
+/* アクセスセクション */
+.access-section {
+  display: flex;
+  justify-content: center;
+}
+
+.access {
+  text-align: center;
+  background-color: var(--yellow400);
+  width: 50%;
+}
+
+.hotel-name {
+  font-size: 64px;
+  padding: 10px;
+  margin: 50px 0px 76px 0px;
+}
+
+.transportation {
+  color: var(--black300);
+  margin-bottom: 50px;
+}
+
+.status {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  width: 480px;
+}
+
+.rest {
+  background-color: white;
+  padding: 0px 20px;
+  margin: 10px;
+}
+
+.none {
+  padding: 0px 20px;
+  margin: 10px;
+}
+
+.retail-link {
+  display: flex;
+  margin-top: 50px;
+  display: flex;
+  padding: 3px 10px 10px 10px;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.thin_Arrow_right_img {
+  width: 10px;
+  height: 8px;
+  position: absolute;
+  right: 13px;
+  bottom: 19px;
+}
+
+.access-button {
+  display: flex;
+  width: 248px;
+  height: 47px;
+  padding: 0px 14px;
+  justify-content: center;
+  align-items: center;
+  background: var(--gray200);
+  position: relative;
+}
+
+.access-button a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40.8px;
+  letter-spacing: 1.12px;
+  color: var(--white);
+}
+.access-button a :hover {
+  background-color: #555;
+}
+#map {
+  width: 50%;
+  height: 584px;
+  background-color: grey;
+}
