@@ -10,7 +10,7 @@ class SiteFooter extends HTMLElement {
           <div class="footer-container">
             <div class="footer-content">
               <div class="nav-section">
-                <a href="#home" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">トップ</a>
+                <a href="#top" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">トップ</a>
                 <a href="#experience" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">イベント紹介</a>
                 <a href="#facility" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">施設紹介</a>
                 
