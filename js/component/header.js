@@ -7,7 +7,7 @@ class SiteHeader extends HTMLElement {
     const headerHTML = `
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
                 <div class="header">
-                    <a href="#home" class="logo">
+                    <a href="#top" class="logo">
                         <img src="/assets/icons/home_logo.svg" alt="home_logo" class="logo">
                     </a>
                     <nav class="nav">
