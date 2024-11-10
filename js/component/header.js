@@ -20,7 +20,7 @@ class SiteHeader extends HTMLElement {
                         </a>
                     </nav>
                     <div class="actions">
-                        <a href="reserve.html" class="action-button reserve">
+                        <a href="#" class="action-button reserve">
                         <div class="icon-wrapper">
                             <img src="/assets/icons/cart_icon.svg" class="cart-icon" alt="Cart">
                         </div>
