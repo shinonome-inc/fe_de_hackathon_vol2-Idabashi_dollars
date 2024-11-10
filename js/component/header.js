@@ -7,15 +7,15 @@ class SiteHeader extends HTMLElement {
     const headerHTML = `
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
                 <div class="header">
-                    <a href="/index.html" class="logo">
+                    <a href="#" class="logo">
                         <img src="/assets/icons/home_logo.svg" alt="home_logo" class="logo">
                     </a>
                     <nav class="nav">
-                        <a href="/pages/experience.html" class="nav-item" data-name="event">イベント紹介</a>
-                        <a href="/pages/facility.html" class="nav-item" data-name="facility">施設紹介</a>
-                        <a href="/pages/access.html" class="nav-item" data-name="access">アクセス・周辺紹介</a>
-                        <a href="/pages/plan.html" class="nav-item nav-item-plan" data-name="plan">プラン・価格</a>
-                        <a href="/pages/login.html" class="nav-item-login" data-name="login">
+                        <a href="#" class="nav-item" data-name="event">イベント紹介</a>
+                        <a href="# class="nav-item" data-name="facility">施設紹介</a>
+                        <a href="#" class="nav-item" data-name="access">アクセス・周辺紹介</a>
+                        <a href="#" class="nav-item nav-item-plan" data-name="plan">プラン・価格</a>
+                        <a href="#" class="nav-item-login" data-name="login">
                             <img src="/assets/icons/person_icon.svg" class="icon" alt="person"> ログイン／新規登録
                         </a>
                     </nav>
@@ -26,7 +26,7 @@ class SiteHeader extends HTMLElement {
                         </div>
                             <span class="text">予約する</span>
                         </a>
-                        <a href="/pages/confirm.html" class="action-button confirm">
+                        <a href="#" class="action-button confirm">
                             <div class="icon-wrapper">
                                 <img src="/assets/icons/information_icon.svg" class="information-icon" alt="Info">
                             </div>
