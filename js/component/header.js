@@ -7,14 +7,14 @@ class SiteHeader extends HTMLElement {
     const headerHTML = `
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
                 <div class="header">
-                    <a href="#" class="logo">
+                    <a href="#home" class="logo">
                         <img src="/assets/icons/home_logo.svg" alt="home_logo" class="logo">
                     </a>
                     <nav class="nav">
-                        <a href="#" class="nav-item" data-name="event">イベント紹介</a>
-                        <a href="#" class="nav-item" data-name="facility">施設紹介</a>
-                        <a href="#" class="nav-item" data-name="access">アクセス・周辺紹介</a>
-                        <a href="#" class="nav-item nav-item-plan" data-name="plan">プラン・価格</a>
+                        <a href="#experience" class="nav-item" data-name="event">イベント紹介</a>
+                        <a href="#facility" class="nav-item" data-name="facility">施設紹介</a>
+                        <a href="#sightseeing" class="nav-item" data-name="access">アクセス・周辺紹介</a>
+                        <a href="#plan" class="nav-item nav-item-plan" data-name="plan">プラン・価格</a>
                         <a href="#" class="nav-item-login" data-name="login">
                             <img src="/assets/icons/person_icon.svg" class="icon" alt="person"> ログイン／新規登録
                         </a>
@@ -160,8 +160,8 @@ class SiteHeader extends HTMLElement {
     this.shadowRoot.appendChild(style);
 
     this.setActiveNavItem();
+    this.addSmoothScroll();
   }
-
   setActiveNavItem() {
     const path = window.location.pathname;
     const navItems = this.shadowRoot.querySelectorAll(
@@ -175,6 +175,27 @@ class SiteHeader extends HTMLElement {
       } else {
         item.classList.remove("active");
       }
+    });
+  }
+
+  addSmoothScroll() {
+    const navItems = this.shadowRoot.querySelectorAll(
+      ".nav-item, .nav-item-plan, .nav-item-login"
+    );
+
+    navItems.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        event.preventDefault();
+        const targetId = item.getAttribute("href").replace("#", "");
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
     });
   }
 }

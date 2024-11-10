@@ -10,9 +10,9 @@ class SiteFooter extends HTMLElement {
           <div class="footer-container">
             <div class="footer-content">
               <div class="nav-section">
-                <a href="#" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">トップ</a>
-                <a href="#" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">イベント紹介</a>
-                <a href="#" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">施設紹介</a>
+                <a href="#home" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">トップ</a>
+                <a href="#experience" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">イベント紹介</a>
+                <a href="#facility" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">施設紹介</a>
                 
                 <div class="contact-info">
                   <p>- 〒100-8111 東京都千代田区千代田1-1</p>
@@ -21,8 +21,8 @@ class SiteFooter extends HTMLElement {
               </div>
               
               <div class="nav-section">
-                <a href="#" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">アクセス</a>
-                <a href="#" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">価格・プラン</a>
+                <a href="#access" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">アクセス</a>
+                <a href="#plan" class="nav-link"><img src="/assets/icons/vector9.svg" alt="矢印" class="arrow-icon">価格・プラン</a>
               </div>
             </div>
             <div class="button-section">
@@ -170,6 +170,25 @@ class SiteFooter extends HTMLElement {
 
     this.shadowRoot.innerHTML = footerHTML;
     this.shadowRoot.appendChild(style);
+    this.addSmoothScroll();
+  }
+  addSmoothScroll() {
+    const navLinks = this.shadowRoot.querySelectorAll(".nav-link");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const targetId = link.getAttribute("href").replace("#", "");
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
   }
 }
 
