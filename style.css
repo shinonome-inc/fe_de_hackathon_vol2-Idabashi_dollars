@@ -18,9 +18,11 @@
   --gold200: #c2aa4e;
   --gold300: #c2a538;
   --gold400: #feeeb7;
+  --gold500: #eeb641;
   --silver: #d8d8d8;
   --silver100: #ddd8ce;
   --silver200: #837d76;
+  --silver300: #bebebe;
   --green: #6e987c;
   --green60: rgba(110, 152, 124, 0.6);
   --green100: #dce4dd;
@@ -136,34 +138,30 @@ body {
   flex-direction: column;
 }
 
-.prices p {
-  margin: 0;
-}
-
 .event-gold {
-  background-color: var(--gold);
+  background-color: var(--gold500);
   color: white;
   border: none;
   text-align: center;
   font-size: 12px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 36px;
   letter-spacing: 1.12px;
-  width: 250px;
+  width: 260px;
 }
 
 .event-silver {
-  background-color: var(--silver);
+  background-color: var(--silver300);
   color: white;
   border: none;
   text-align: center;
   font-size: 12px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 36px;
   letter-spacing: 1.12px;
-  width: 250px;
+  width: 260px;
 }
 
 .prescribe-section {
